@@ -1,0 +1,18 @@
+server:
+  port: 8087
+
+  #celesta:
+  # h2:
+  #  inMemory: true
+
+celesta:
+  jdbc:
+    url: jdbc:postgresql://localhost:5433/rolemodel
+    username: postgres
+    password: F708420Dx
+  #scorePath: file:///X:/IdeaProjects/smev-queue2/src/main/celestasql/ru/curs/smev
+#  jdbc:
+#    url: jdbc:firebirdsql://localhost:3050/F:/Programs/RedDatabase/examples/empbuild/SMEV.FDB?encoding=UTF8
+#    username: SYSDBA
+#    password: masterkey
+  #forceDbInitialize: true
