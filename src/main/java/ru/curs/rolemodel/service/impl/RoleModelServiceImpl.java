@@ -18,8 +18,11 @@ public class RoleModelServiceImpl implements RoleModelService {
     public void deleteUser(CallContext callContext, String userSId) {
         PoljzovateljCursor cursor = new PoljzovateljCursor(callContext);
 
-        cursor.setSid(userSId);
-        cursor.delete();
+        boolean present = cursor.tryGet(userSId);
+
+        if(present) {
+            cursor.delete();
+        }
     }
 
     @Override
@@ -27,8 +30,11 @@ public class RoleModelServiceImpl implements RoleModelService {
     public void deleteRole(CallContext callContext, String roleId) {
         RoljCursor cursor = new RoljCursor(callContext);
 
-        cursor.setRolj(roleId);
-        cursor.delete();
+        boolean present = cursor.tryGet(roleId);
+
+        if(present) {
+            cursor.delete();
+        }
     }
 
     @Override
@@ -36,8 +42,11 @@ public class RoleModelServiceImpl implements RoleModelService {
     public void deleteRazr(CallContext callContext, String razrId) {
         RazrCursor cursor = new RazrCursor(callContext);
 
-        cursor.setRazr(razrId);
-        cursor.delete();
+        boolean present = cursor.tryGet(razrId);
+
+        if(present) {
+            cursor.delete();
+        }
     }
 
     @Override
